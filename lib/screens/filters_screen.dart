@@ -30,12 +30,12 @@ class _FiltersScreenState extends State<FiltersScreen> {
   }
 
   Widget _buildSwitchListTile(String title, String description,
-      bool currentValue, VoidCallback updateValue) {
+      bool currentValue, Function updateValue) {
     return SwitchListTile(
       title: Text(title),
       subtitle: Text(description),
       value: currentValue,
-      onChanged: updateValue,
+      onChanged: (_) => updateValue(),
     );
   }
 
